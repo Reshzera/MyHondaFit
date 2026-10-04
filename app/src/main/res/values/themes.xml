@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.MyHondaFit" parent="android:Theme.Material.Light.NoActionBar" />
+    <!--
+      Deliberately not a Material theme. The shell paints every pixel, so this
+      only needs to avoid a light flash before Compose takes over.
+    -->
+    <style name="Theme.MyHondaFit" parent="android:Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@color/head_unit_bg</item>
+        <item name="android:statusBarColor">@color/head_unit_bg</item>
+        <item name="android:navigationBarColor">@color/head_unit_bg</item>
+    </style>
 </resources>

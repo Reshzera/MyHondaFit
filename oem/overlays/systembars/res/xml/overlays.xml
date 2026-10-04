@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Explicit resource map (Android 11+). target = the CarSystemUI resource,
+  value = our replacement. Names match, so @bool/... resolves to this package.
+-->
+<overlay>
+    <item target="bool/config_enableTopSystemBar"    value="@bool/config_enableTopSystemBar" />
+    <item target="bool/config_enableBottomSystemBar" value="@bool/config_enableBottomSystemBar" />
+    <item target="bool/config_enableLeftSystemBar"   value="@bool/config_enableLeftSystemBar" />
+    <item target="bool/config_enableRightSystemBar"  value="@bool/config_enableRightSystemBar" />
+    <item target="string/config_notificationPanelViewMediator" value="@string/config_notificationPanelViewMediator" />
+</overlay>

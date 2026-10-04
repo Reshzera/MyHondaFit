@@ -1,0 +1,11 @@
+// How this overlay ships: built in the AOSP tree and installed to
+// /product/overlay. Add MyHondaFitSystemBarsOverlay to PRODUCT_PACKAGES, and
+// mark it enabled + immutable in /product/overlay/config/config.xml so it is
+// always on and cannot be turned off at runtime.
+runtime_resource_overlay {
+    name: "MyHondaFitSystemBarsOverlay",
+    resource_dirs: ["res"],
+    manifest: "AndroidManifest.xml",
+    sdk_version: "current",
+    product_specific: true,
+}

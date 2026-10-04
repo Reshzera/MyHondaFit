@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PROJECT_GOAL.md: no status bar, no nav bar, no notification shade. Our shell
+  owns the display from boot to shutdown, so every CarSystemUI bar is off.
+
+  Stock values in this AAOS 15 image: top=true, bottom=true, left=false, right=false.
+-->
+<resources>
+    <bool name="config_enableTopSystemBar">false</bool>
+    <bool name="config_enableBottomSystemBar">false</bool>
+    <bool name="config_enableLeftSystemBar">false</bool>
+    <bool name="config_enableRightSystemBar">false</bool>
+
+    <!--
+      Not optional. SystemBarConfigs.checkSystemBarEnabledForNotificationPanel()
+      throws at startup if the configured mediator is the Top- or Bottom- variant
+      while that bar is off, so turning the bars off without this crash-loops
+      CarSystemUI. The base mediator asserts nothing about bars.
+    -->
+    <string name="config_notificationPanelViewMediator">com.android.systemui.car.notification.NotificationPanelViewMediator</string>
+</resources>

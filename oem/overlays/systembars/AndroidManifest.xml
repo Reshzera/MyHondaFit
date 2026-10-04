@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  MyHondaFit system bar overlay.
+
+  CarSystemUI declares no <overlayable>, so an overlay is only accepted when it
+  is preinstalled on a partition (the shipping path: /product/overlay) or signed
+  with the target's signature (the dev path: AOSP platform key + adb install).
+  See oem/README.md.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myhondafit.overlay.systembars">
+
+    <application android:hasCode="false" />
+
+    <overlay
+        android:targetPackage="com.android.systemui"
+        android:isStatic="false"
+        android:resourcesMap="@xml/overlays" />
+</manifest>
